@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/events.css">
+    <title>Events</title>
+</head>
+<body>
+   
+    <svg display="none">
+        <symbol id="close" viewBox="0 0 20 20">
+          <line x1="2" y1="2" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <line x1="2" y1="18" x2="18" y2="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </symbol>
+        <symbol id="left" viewBox="0 0 20 20">
+          <polyline points="11,7 8,10 11,13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </symbol>
+        <symbol id="right" viewBox="0 0 20 20">
+          <polyline points="9,7 12,10 9,13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </symbol>
+      </svg>
+      <div id="img_grid" class="img-grid">
+        <div class="img-grid__detail-pane" data-open="false">
+          <div class="img-grid__detail-pane-left">
+            <img class="img-grid__detail-pane-img" alt="Random image" src="/images/4.jpg" width="300" height="225" data-image>
+          </div>
+          <div class="img-grid__detail-pane-right">
+            <button class="img-grid__detail-pane-close" type="button" aria-label="Close" data-action="close">
+              <svg class="img-grid__detail-pane-close-svg" width="20px" height="20px">
+                <use xlink:href="#close" />
+              </svg>
+            </button>
+            <div class="img-grid__detail-pane-info">
+              <div>
+                <h5 class="img-grid__detail-pane-title" data-title>Random Image 1</h5>
+                <p class="img-grid__detail-pane-site">picsum.photos</p>
+              </div>
+              <a class="img-grid__detail-pane-btn" href="#">View Image</a>
+            </div>
+            <div class="img-grid__detail-pane-arrows">
+              <button class="img-grid__detail-pane-btn img-grid__detail-pane-btn--arrow" 
+              type="button" aria-label="Previous" data-action="prev" disabled>
+                <svg class="img-grid__detail-pane-arrow-svg" width="20px" height="20px">
+                  <use xlink:href="#left" />
+                </svg>
+              </button>
+              <button class="img-grid__detail-pane-btn img-grid__detail-pane-btn--arrow" type="button" aria-label="Next" data-action="next">
+                <svg class="img-grid__detail-pane-arrow-svg" width="20px" height="20px">
+                  <use xlink:href="#right" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="img-grid__cell">
+          <button class="img-grid__cell-img-btn" type="button" data-action="open" data-id="0">
+            <img class="img-grid__cell-img" alt="Random image" src="/images/5.jpg" width="300" height="225" data-thumb>
+          </button>
+          <div class="img-grid__cell-caption">
+            <a class="img-grid__cell-caption-link" href="#">
+              <span class="img-grid__cell-caption-title">Random Image 1</span><br>
+              <span class="img-grid__cell-caption-subtitle">picsum.photos</span>
+            </a>
+          </div>
+        </div>
+        <div class="img-grid__cell">
+          <button class="img-grid__cell-img-btn" type="button" data-action="open" data-id="1">
+            <img class="img-grid__cell-img" alt="Random image" src="/images/6.jpg" width="300" height="225" data-thumb>
+          </button>
+          <div class="img-grid__cell-caption">
+            <a class="img-grid__cell-caption-link" href="#">
+              <span class="img-grid__cell-caption-title">Random Image 2</span><br>
+              <span class="img-grid__cell-caption-subtitle">picsum.photos</span>
+            </a>
+          </div>
+        </div>
+        <div class="img-grid__cell">
+          <button class="img-grid__cell-img-btn" type="button" data-action="open" data-id="2">
+            <img class="img-grid__cell-img" alt="Random image" src="/images/ict 1.jpg" width="300" height="225" data-thumb>
+          </button>
+          <div class="img-grid__cell-caption">
+            <a class="img-grid__cell-caption-link" href="#">
+              <span class="img-grid__cell-caption-title">Random Image 3</span><br>
+              <span class="img-grid__cell-caption-subtitle">picsum.photos</span>
+            </a>
+          </div>
+        </div>
+        <div class="img-grid__cell">
+          <button class="img-grid__cell-img-btn" type="button" data-action="open" data-id="3">
+            <img class="img-grid__cell-img" alt="Random image" src="/images/many.webp" width="300" height="225" data-thumb>
+          </button>
+          <div class="img-grid__cell-caption">
+            <a class="img-grid__cell-caption-link" href="#">
+              <span class="img-grid__cell-caption-title">Random Image 4</span><br>
+              <span class="img-grid__cell-caption-subtitle">picsum.photos</span>
+            </a>
+          </div>
+        </div>
+        <div class="img-grid__cell">
+          <button class="img-grid__cell-img-btn" type="button" data-action="open" data-id="4">
+            <img class="img-grid__cell-img" alt="Random image" src="/images/home.jpg" width="300" height="225" data-thumb>
+          </button>
+          <div class="img-grid__cell-caption">
+            <a class="img-grid__cell-caption-link" href="#">
+              <span class="img-grid__cell-caption-title">Random Image 5</span><br>
+              <span class="img-grid__cell-caption-subtitle">picsum.photos</span>
+            </a>
+          </div>
+        </div>
+        <div class="img-grid__cell">
+          <button class="img-grid__cell-img-btn" type="button" data-action="open" data-id="5">
+            <img class="img-grid__cell-img" alt="Random image" src="/images/ttwo.webp" width="300" height="225" data-thumb>
+          </button>
+          <div class="img-grid__cell-caption">
+            <a class="img-grid__cell-caption-link" href="#">
+              <span class="img-grid__cell-caption-title">Random Image 6</span><br>
+              <span class="img-grid__cell-caption-subtitle">picsum.photos</span>
+            </a>
+          </div>
+        </div>
+        <div class="img-grid__cell">
+          <button class="img-grid__cell-img-btn" type="button" data-action="open" data-id="6">
+            <img class="img-grid__cell-img" alt="Random image" src="/images/donate.jpg" width="300" height="225" data-thumb>
+          </button>
+          <div class="img-grid__cell-caption">
+            <a class="img-grid__cell-caption-link" href="#">
+              <span class="img-grid__cell-caption-title">Random Image 7</span><br>
+              <span class="img-grid__cell-caption-subtitle">picsum.photos</span>
+            </a>
+          </div>
+        </div>
+        <div class="img-grid__cell">
+          <button class="img-grid__cell-img-btn" type="button" data-action="open" data-id="7">
+            <img class="img-grid__cell-img" alt="Random image" src="/images/1.jpg" width="300" height="225" data-thumb>
+          </button>
+          <div class="img-grid__cell-caption">
+            <a class="img-grid__cell-caption-link" href="#">
+              <span class="img-grid__cell-caption-title">Random Image 8</span><br>
+              <span class="img-grid__cell-caption-subtitle">picsum.photos</span>
+            </a>
+          </div>
+        </div>
+        <div class="img-grid__cell">
+          <button class="img-grid__cell-img-btn" type="button" data-action="open" data-id="8">
+            <img class="img-grid__cell-img" alt="Random image" src="/images/8.jpg" width="300" height="225" data-thumb>
+          </button>
+          <div class="img-grid__cell-caption">
+            <a class="img-grid__cell-caption-link" href="#">
+              <span class="img-grid__cell-caption-title">Random Image 9</span><br>
+              <span class="img-grid__cell-caption-subtitle">picsum.photos</span>
+            </a>
+          </div>
+        </div>
+        <div class="img-grid__cell">
+          <button class="img-grid__cell-img-btn" type="button" data-action="open" data-id="9">
+            <img class="img-grid__cell-img" alt="Random image" src="/images/2.jpg" width="300" height="225" data-thumb>
+          </button>
+          <div class="img-grid__cell-caption">
+            <a class="img-grid__cell-caption-link" href="#">
+              <span class="img-grid__cell-caption-title">Random Image 10</span><br>
+              <span class="img-grid__cell-caption-subtitle">picsum.photos</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <script>
+        window.addEventListener("DOMContentLoaded",() => {
+  const ig = new ImageGrid("#img_grid");
+});
+
+class ImageGrid {
+  constructor(selector) {
+    this.el = document.querySelector(selector);
+    this.detailPaneOpen = true;
+    this.currentImage = 0;
+    this.images = 10;
+
+    this.updateView();
+
+    this.el?.addEventListener("click",this.action.bind(this));
+    document.addEventListener("keydown",this.action.bind(this));
+  }
+  action(e) {
+    const { key, shiftKey, target } = e;
+    const action = target.getAttribute("data-action");
+    const imageID = +target.getAttribute("data-id");
+
+    if (key !== "Tab" && !shiftKey) {
+      // open the pane (or close if clicking the thumb)
+      if (!key && action === "open") {
+        if (imageID === this.currentImage && this.detailPaneOpen)
+          this.closeDetailPane();
+        else
+          this.openDetailPane(imageID);
+
+      // close the pane
+      } else if (key === "Escape" || action === "close") {
+        this.closeDetailPane();
+
+      // previous image
+      } else if (key === "ArrowLeft" || (!key && action === "prev")) {
+        this.prev();
+
+      // next image
+      } else if (key === "ArrowRight" || (!key && action === "next")) {
+        this.next();
+      }
+
+      this.updateView();
+      this.moveFocus(target,action);
+    }
+  }
+  closeDetailPane() {
+    this.detailPaneOpen = false;
+  }
+  openDetailPane(imageID) {
+    this.detailPaneOpen = true;
+    this.currentImage = imageID;
+  }
+  prev() {
+    --this.currentImage;
+
+    if (this.currentImage < 0)
+      this.currentImage = 0;
+  }
+  next() {
+    ++this.currentImage;
+
+    if (this.images < 2)
+      this.currentImage = 0;
+    else if (this.currentImage === this.images)
+      this.currentImage = this.images - 1;
+  }
+  moveFocus(target,action) {
+    const isPrev = action === "prev";
+    const isNext = action === "next";
+
+    if (isPrev || isNext) {
+      if (target.disabled) {
+        if (isPrev)
+          this.el.querySelector(`[data-action="next"]`)?.focus();
+        else if (isNext)
+          this.el.querySelector(`[data-action="prev"]`)?.focus();
+      } else {
+        target.focus();
+      }
+    }
+  }
+  updateView() {
+    // open or close the pane
+    const dataID = this.currentImage;
+    const detailPane = document.querySelector("[data-open]");
+    detailPane?.setAttribute("data-open",this.detailPaneOpen ? "true" : "false");
+    
+    // change its DOM location
+    const minWidths = [768,1024,1280];
+    const matchedWidths = minWidths.filter(width => {
+      const mediaQuery = window.matchMedia(`(min-width: ${width}px)`);
+      return mediaQuery.matches;
+    });
+    const imagesPerRow = 2 + matchedWidths.length;
+    const moveToRow = 1 + Math.ceil((dataID + 1) / imagesPerRow);
+    detailPane.style.gridRow = moveToRow;
+
+    const firstCellInRow = this.el.querySelector(`[data-id="${dataID}"]`);
+    this.el.insertBefore(detailPane, firstCellInRow?.parentNode.nextSibling);
+
+    // scroll to it
+    if (this.detailPaneOpen) {
+      const firstCellBtn = this.el.querySelector(`[data-id="0"]`);
+      const firstCell = firstCellBtn?.parentElement;
+      const { offsetHeight, offsetTop } = firstCell;
+      const scrollY = detailPane.offsetTop - (offsetHeight + offsetTop * 2);
+
+      window.scrollTo({
+        top: scrollY,
+        behavior: "smooth"
+      });
+    }
+
+    const paneImage = this.el.querySelector(`[data-image]`);
+    const paneThumbBtns = this.el.querySelectorAll(`[data-id]`);
+    const paneThumbBtn = this.el.querySelector(`[data-id="${dataID}"]`);
+    const paneThumb = paneThumbBtn?.querySelector(`[data-thumb]`);
+
+    // “…active” class
+    Array.from(paneThumbBtns).forEach((btn,i) => {
+      const activeClass = "img-grid__cell-img-btn--active";
+
+      if (i === dataID && this.detailPaneOpen)
+        btn.classList.add(activeClass);
+      else
+        btn.classList.remove(activeClass);
+    });
+    
+    // update the src
+    if (paneImage && paneThumb)
+      paneImage.src = paneThumb.src;
+
+    // update the title
+    const paneTitle = this.el.querySelector("[data-title]");
+    if (paneTitle)
+      paneTitle.textContent = `Random Image ${dataID + 1}`;
+
+    // disable the left arrow if on the first image
+    const prevButton = this.el.querySelector(`[data-action="prev"]`);
+    if (prevButton)
+      prevButton.disabled = dataID === 0;
+    
+    // disable the right arrow if on the last image
+    const nextButton = this.el.querySelector(`[data-action="next"]`);
+    if (nextButton)
+      nextButton.disabled = this.images < 2 || dataID === this.images - 1;
+  }
+}
+      </script>
+    
+</body>
+</html>

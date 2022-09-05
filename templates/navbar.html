@@ -1,0 +1,55 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
+<nav id="header">
+    <div class="topnav" id="myTopnav">
+        
+    <a  id="logo" href="/"><img id="logo" src="{% static '/images/Tech PowHer.jpg ' %} " alt=""> 
+    
+     </a> 
+    
+    
+     <div style="float:right;" class="dropdown">
+        <button class="dropbtn"> Donate
+        <i style="color: black;" class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content animate">
+        <a href="/Donate">Donate</a>
+        <a href="/Partners">Partner</a>
+        </div>
+        </div> 
+    <a style=" float:right;padding: 16px 2px; " href="/blog">Blog</a>
+    <a style=" float:right;padding: 16px 2px; " href="/Programs">Programs/Events</a>
+    <a style=" float:right;padding: 16px 2px; " href="/contact">Contact</a>
+    <a  href="/about" style="float:right;padding: 16px 2px;"> About </a>
+    <a  href="/" style="float:right;padding: 16px 2px; ">
+        Home </a>
+    <a href="javascript:void(0);" style="font-size:25px;  " class="icon"
+     onclick="NavBar()">&#9776;</a>
+    </div>
+    </nav>
+   
+    <script>
+        function NavBar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+    x.className += " responsive";
+    } else {
+    x.className = "topnav";
+    }
+    }
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("myTopnav").style.width = "100%";
+    document.getElementById("header").style.position = "fixed";
+    document.getElementById("header").style.top = "0%";
+    document.getElementById("roll_back").style.display = "flex";
+    } else {
+    document.getElementById("myTopnav").style.width = "80%";
+    document.getElementById("header").style.position = "fixed";
+    document.getElementById("header").style.top = "4rem";
+    document.getElementById("roll_back").style.display = "none";
+    }
+    }
+    
+    </script>

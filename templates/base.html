@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Blog</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+            <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+            <link rel="stylesheet" href="{% static 'styles/blog.css' %}">
+    </head>
+
+    <body>
+
+
+
+        <!--BANNER-->
+    <div class="banner" id="banner">
+        <div class="slideshow">
+        <div class="overlay"></div>
+        <img class="mySlides" src=" {% static '/images/many.webp' %} ">
+        <img class="mySlides" src="{% static '/images/ma.webp' %}">
+        <img class="mySlides" src="{% static '/images/blog.jpg ' %}">
+        </div>
+        <div id="ourclients">
+        <div class="clients-wrap">
+        <ul id="clientlogo" class="clearfix">
+        <li>
+        <h4>1Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        </li>
+        <li>
+        <h4>2Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        </li>
+        <li>
+        <h4>3Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        </li>
+        <li>
+        <h4>4Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        </li>
+        <li>
+        <h4>5Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        </li>
+        <li>
+        <h4>6Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        
+    
+
+        <!-- Navigation -->
+        {% include 'navbar.html' %}
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+        <!-- Footer -->
+        {% include 'footer.html' %}
+    </body>
+</html>

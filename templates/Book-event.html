@@ -1,0 +1,141 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/Book-event.css' %}">
+    
+    <title>Book</title>
+</head>
+
+<body>
+    
+    <div id="main">
+  
+        <!-- Banner for the background -->
+        <div id="banner"></div>
+        
+        <!-- Content of the form -->
+        <div class="content">
+          <form id="survey-form">
+              
+            <!-- Purple banner at the top of the form -->
+              <div id="form-banner"></div>
+              <div id="form-content">
+                
+                <!-- Start of header -->
+                <h1 id="title">Tech PowHer Registration</h1>
+                <p id="description">Great news for all students! 📖 In ONE DAY, we have 3 WORKSHOPS lead by experienced speakers 👨‍🏫 Simply choose one of these workshops you're interested to join.</p>
+                <!-- End of header -->
+                
+                <!-- Start of Name label & input -->
+                <div class="items">
+                  <div class="labels">
+                    <label id="name-label" for="name">Name <span class="red-star">*</span></label>
+                    <div class="input-field">
+                      <input class="input" autofocus type="text" name="name" id="name" required placeholder="Enter your name">
+                      </input>
+                      <div class="underline"></div>
+                    </div>
+                  </div>
+                </div>
+            <!-- End of Name label & input -->
+            
+            <!-- Start of Email label & input -->
+                <div class="items">
+                  <div class="labels">
+                    <label id="email-label" for="email">Email <span class="red-star">*</span></label>
+                    <div class="input-field">
+                      <input class="input" type="email" name="email" id="email" required placeholder="Enter your Email">
+                      </input>
+                      <div class="underline"></div>
+                    </div>
+                  </div>
+                </div>
+          <!-- End of Email label & input -->
+          
+          <!-- Start of Age label & input -->
+                <div class="items">
+                  <div class="labels">
+                    <label id="number-label" for="age">Age <span class="red-star">*</span></label>
+                    <div class="input-field">
+                      <input class="input" type="number" name="age" id="number" min="1" max="100" placeholder="Enter your age">
+                      </input>
+                      <div class="underline"></div>
+                    </div>
+                  </div>
+                </div>
+        <!-- End of Name label & input -->
+                
+        <!-- Start of Dropdown label & input -->
+                <div class="items">
+                  <div class="labels">
+                    <label for="currentPos">Which option best describes your current program?</label><br>
+                      <select name="currentPos" id="dropdown">
+                        <option disabled value>Select an option</option>
+                        <option value="foundation">Foundation Student</option>
+                        <option value="degree">Degree Student</option>
+                        <option value="postgraduate">Postgraduate Student</option>
+                      </select>
+                  </div>
+                </div>
+        <!-- End of Dropdown label & input -->
+        
+        <!-- Start of Radio button label & input -->
+                <div class="items">
+                  <div class="labels">
+                    <label  for="workshop">Choose the workshop you wish to attend <span class="red-star">*</span></label>
+                    <div id="workshop" class="display-inline">
+                      <ul style="list-style: none;">
+                        <li class="radio"><input name="radio-buttons" value="1" type="radio" class="workshop-choice"><label>Laravel web development</label></li>
+                        <li class="radio"><input name="radio-buttons" value="2" type="radio" class="workshop-choice"><label>Mobile application development</label></li>
+                        <li class="radio"><input name="radio-buttons" value="3" type="radio" class="workshop-choice"><label>Arduino</label></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+        <!-- End of Radio button label & input -->
+        
+        <!-- Start of Checkbox label & input -->
+                <div class="items">
+                    <div class="labels">
+                      <label  for="diet"> Special skills (Check all that apply):</label>
+                      <div class="display-inline">
+                        <ul id="diet" style="list-style: none;">
+                          <li class="checkbox"><input name="diet" value="1" type="checkbox" class="diet-choice"><label>Skills</label></li>
+                          <li class="checkbox"><input name="diet" value="2" type="checkbox" class="diet-choice"><label>Skills</label></li>
+                          <li class="checkbox"><input name="diet" value="3" type="checkbox" class="diet-choice"><label>Skills</label></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+        <!-- End of Checkbox label & input -->
+                <div class="items">
+                  <div class="labels">
+                    <label for="comment">Any suggestions for the upcoming Tech PowHer events?</label>
+                    <div class="input-field">
+                      <textarea  name="suggestions" style="width: 75%; resize: vertical; border-radius: 5px; padding: 5px;" id="comments" placeholder="Enter your suggestions here..."></textarea>
+                  </div>
+                </div>
+        <!-- End of Dropdown label & input -->
+              </div>
+              <div style="text-align: center;">
+                  <button id="submit" type="submit">Submit</button>
+              </div>
+          </form>
+        </div>
+      </div>
+     
+      
+
+
+      
+
+
+
+
+</body>
+</html>
